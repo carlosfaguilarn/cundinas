@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="tema">
+    <ion-title>Mis cundinas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let cundina of cundinas" (click)="abrirDetalle(cundina)"> 
+      <!--<img class="item" src="{{cundina.img}}" alt="XX">-->
+      <!--<ion-icon name="ios-card"></ion-icon>-->
+      <div class="row">
+        <div class="col-sm-4 little-margin-right">
+          <img src="assets/imgs/paypal.jpg" alt="XX" *ngIf="cundina.tipo==paypal" class="icon-img">
+          <img src="assets/imgs/card.jpg" alt="XX" *ngIf="cundina.tipo!=paypal" class="icon-img">
+        </div>
+        <div class="col-sm-8 vertical-align">
+          <h2>{{cundina.nombre}}</h2>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom #fab3>
+    <button ion-fab color="default" (click) ="addCundina()"><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

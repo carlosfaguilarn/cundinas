@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="tema">
+      <ion-title>Tarjetas</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let tarjeta of tarjetas"> 
+        <div class="row">
+          <div class="col-sm-4 little-margin-right">
+            <img src="assets/imgs/card.jpg" alt="XX" class="icon-img">
+          </div>
+          <div class="col-sm-8 vertical-align">
+            <h2>{{tarjeta.holder_name}}</h2>
+            <ion-row justify-centent-end>
+              <ion-col col-6>
+                  <p>{{tarjeta.expiration_year +'/'+expiration_month}}</p>
+              </ion-col>
+              <ion-col col6>
+                  <p>{{tarjeta.cvv2}}</p>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  
+    <ion-fab right bottom #fab3>
+      <button ion-fab color="default" (click) ="addTarjeta()"><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
+    </ion-fab>
+  </ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar color="tema">
+      <ion-title>Agregar tarjeta</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <form (ngSubmit)="onSubmit()" class="form-center">
+      <ion-row justify-content-center>
+          <img src="assets/imgs/card.jpg" alt="XX" class="img-media">
+      </ion-row>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="tarjeta.n1" name="n1" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="tarjeta.n2" name="n2" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="tarjeta.n3" name="n3" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="tarjeta.n4" name="n4" placeholder="XXXX"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="tarjeta.fecha" name="fecha" placeholder="MM/AAAA"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="tarjeta.cvc" name="cvc" placeholder="CVC"></ion-input>
+      </ion-item>
+
+      <ion-item> 
+        <ion-input type="text" [(ngModel)]="tarjeta.propietario" name="propietario" placeholder="Nombre del propietario"></ion-input>
+      </ion-item>
+      
+      <button ion-button block type="submit">Registrar</button>
+    </form> 
+  </ion-content>
+  

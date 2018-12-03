@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="tema">
+    <ion-title>Crear cuenta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()" class="form-center">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.name" name="name" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.last_name" name="last_name" placeholder="Apellido(s)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.email" name="email" placeholder="Correo electrónico"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.phone_number" name="phone_number" placeholder="Teléfono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.address" name="address" placeholder="Dirección"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.password" name="password" placeholder="Contraseña"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.role" name="role" placeholder="Tipo de usuario"></ion-input>
+    </ion-item>  
+
+    <button ion-button block type="submit">Guardar</button>
+  </form> 
+</ion-content>

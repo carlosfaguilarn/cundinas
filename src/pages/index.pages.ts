@@ -1,0 +1,11 @@
+export { MenuPage } from './menu/menu';
+export { InicioPage } from './inicio/inicio';
+export { CundinasPage } from './cundinas/cundinas';
+export { HistorialPage } from './historial/historial';
+export { LoginPage } from './login/login';
+export { DetalleCundinaPage } from "./detalle-cundina/detalle-cundina";
+export { AddCundinaPage } from './add-cundina/add-cundina';
+export { TarjetasPage } from './tarjetas/tarjetas';
+export { AddTarjetaPage } from './add-tarjeta/add-tarjeta';
+export { NotificacionesPage } from "./notificaciones/notificaciones";
+export { RegistroPage } from "./registro/registro";

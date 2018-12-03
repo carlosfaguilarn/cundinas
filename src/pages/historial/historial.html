@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="tema">
+    <ion-title>Historial</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="no-sccroll-bar">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-11 class="align-end"> 
+        Filtrar por:
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon ios="ios-color-filter" md="md-color-filter"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item *ngFor="let cundina of historial">  
+      <div class="row">
+        <div class="col-sm-4 little-margin-right">
+          <img src="assets/imgs/{{cundina.img}}" alt="XX" class="icon-img">
+        </div>
+        <div class="col-sm-8 vertical-align">
+          <h2>{{cundina.nombre}}</h2>
+        </div>
+      </div> 
+    </ion-item>
+  </ion-list>
+</ion-content>

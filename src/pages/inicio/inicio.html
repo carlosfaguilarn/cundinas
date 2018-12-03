@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="tema">
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="text-align: center; overflow-y: hidden;">
+  <ion-card>
+    <ion-card-header>
+      Bienvenido, ¿Qué quieres hacer?
+    </ion-card-header>
+  </ion-card>
+ 
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-row justify-content-center>
+          <img src="assets/imgs/{{user.url_image}}" [alt]="user.url_image" class="img-big-perfil">
+      </ion-row>
+      <ion-col col-6>
+        <ion-icon ios="ios-person" md="md-person"></ion-icon><br>
+        {{user.name+' '+user.last_name}}
+      </ion-col>
+      <ion-col col-6>
+        <ion-icon ios="ios-call" md="md-call"></ion-icon><br>
+        {{user.phone_number}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <div class="historial-list">
+    <h4>Tus próximos pago es</h4>
+    <ion-list>
+      <ion-item>
+        <ion-row>
+          <ion-col col-4>
+            <img src="assets/imgs/{{cundinas.tipo}}.jpg" alt="tipo" class="img-big-icon">
+          </ion-col>
+          <ion-col col-8>
+            <p>{{cundinas.nombre}}</p>
+            <p>{{cundinas.turno}}</p>
+            <p>{{cundinas.fecha_pago}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

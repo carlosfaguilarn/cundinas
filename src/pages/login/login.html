@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Debes inciar sesión</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
+		<ion-list inset>
+			<ion-item>
+        		<ion-input [(ngModel)]="user.email" name="email"  placeholder="Correo electrónico"></ion-input>
+			</ion-item> 
+
+			<ion-item>
+				<ion-input [(ngModel)]="user.password" name="password"  placeholder="Contraseña"></ion-input>
+			</ion-item>
+		</ion-list>
+
+		<div padding-horizontal>
+			<button ion-button full type="submit" >Acceder</button>
+
+			<ion-row content-justify-center>
+				<a (click)="registrar()">Crea una cuenta</a>
+			</ion-row>
+		</div>  
+	</form>
+</ion-content>

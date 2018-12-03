@@ -1,0 +1,45 @@
+.centrar{
+    text-align: center;
+}
+.info-user{
+    background-color: red;
+    
+}
+.align-end{
+    text-align: end;
+}
+.img-big-perfil{
+    border-radius: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+.img-big-icon{
+    max-width: 70px;
+    max-height: 70px;
+}
+.historial-list{ 
+    height: 250px;
+    overflow-y: auto;
+} 
+.btn-add{
+    border-radius: 100%;
+}
+.form-center ion-input{
+    text-align: center;
+}
+.vertical-align{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.img-media{
+    width: 150px;
+    height: 150px;
+}
+.no-sccroll-bar{
+    ::-webkit-scrollbar{
+        display:none;
+    }
+    overflow-y: hidden;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "cundinas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
