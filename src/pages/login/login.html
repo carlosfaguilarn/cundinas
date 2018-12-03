@@ -11,11 +11,11 @@
   <form #f="ngForm" (ngSubmit)="onSubmit()">
 		<ion-list inset>
 			<ion-item>
-        		<ion-input [(ngModel)]="user.email" name="email"  placeholder="Correo electrónico"></ion-input>
+        		<ion-input type="text" [(ngModel)]="user.email" name="email"  placeholder="Correo electrónico"></ion-input>
 			</ion-item> 
 
 			<ion-item>
-				<ion-input [(ngModel)]="user.password" name="password"  placeholder="Contraseña"></ion-input>
+				<ion-input type="password" [(ngModel)]="user.password" name="password"  placeholder="Contraseña"></ion-input>
 			</ion-item>
 		</ion-list>
 

@@ -24,10 +24,12 @@ export class CardsProvider {
 
   newCard(card) {
     let params = JSON.stringify(card);
-    let options = {
-      headers: {'Content-Type': 'application/json'}
-    };
-    return this.http.post(this.url+'card/add', params, options);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.token
+    });  
+
+    return this.http.post(this.url+'card/add', params, {headers});
   } 
   
 }

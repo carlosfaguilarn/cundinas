@@ -12,17 +12,7 @@ export class InicioPage {
   public cundinas: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    /*this.user = {
-      "nombre" : "Carlos Aguilar",
-      "img": "userhombre.png",
-      "telefono": "6682711308",
-      "cundinas": {
-        "nombre": "Grupo 4-01",
-        "turno": "4",
-        "fecha_pago": "24/11/2018",
-        "tipo": "card"
-      }
-    */
+
     this.user = new User('','','','','','','','','');
     this.cundinas = {
       "nombre": "Grupo 4-01",

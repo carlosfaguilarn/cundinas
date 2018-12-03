@@ -9,3 +9,4 @@ export { TarjetasPage } from './tarjetas/tarjetas';
 export { AddTarjetaPage } from './add-tarjeta/add-tarjeta';
 export { NotificacionesPage } from "./notificaciones/notificaciones";
 export { RegistroPage } from "./registro/registro";
+export { AddIntegrantePage } from "./add-integrante/add-integrante";

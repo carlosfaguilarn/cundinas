@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+      <ion-title>Agrega a los integrantes</ion-title>
+    </ion-navbar>
+</ion-header>
+  
+<ion-content>
+  <ion-searchbar class="form-control" name="busqueda" id="busqueda" placeholder="Busca un usuario" [(ngModel)]="busqueda"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let cliente of clientes | filtro: busqueda async" (click)="submit(cliente._id)">
+      {{cliente.name+' '+cliente.last_name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

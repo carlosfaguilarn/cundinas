@@ -6,6 +6,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
+import { FiltroPipe } from "../pipes/filtro/filtro";
 
 import { 
   MenuPage, 
@@ -18,11 +19,13 @@ import {
   TarjetasPage, 
   AddTarjetaPage, 
   NotificacionesPage,
-  RegistroPage
+  RegistroPage,
+  AddIntegrantePage
 } from "../pages/index.pages";
 import { NotificacionesProvider } from '../providers/notificaciones';
 import { UserProvider } from '../providers/user';
 import { CardsProvider } from '../providers/cards';
+import { CundinaProvider } from '../providers/cundina';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { CardsProvider } from '../providers/cards';
     TarjetasPage, 
     AddTarjetaPage,
     NotificacionesPage,
-    RegistroPage
+    RegistroPage,
+    AddIntegrantePage,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { CardsProvider } from '../providers/cards';
     TarjetasPage, 
     AddTarjetaPage,
     NotificacionesPage,
-    RegistroPage
+    RegistroPage,
+    AddIntegrantePage
   ],
   providers: [
     StatusBar,
@@ -65,7 +71,8 @@ import { CardsProvider } from '../providers/cards';
     NotificacionesProvider,
     UserProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CardsProvider
+    CardsProvider,
+    CundinaProvider
   ]
 })
 export class AppModule {}

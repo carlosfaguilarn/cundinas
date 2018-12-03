@@ -4,25 +4,31 @@
   </ion-navbar>
 </ion-header>
 
-
-<ion-content>
+ 
+<ion-content> 
   <ion-list>
-    <ion-item *ngFor="let cundina of cundinas" (click)="abrirDetalle(cundina)"> 
-      <!--<img class="item" src="{{cundina.img}}" alt="XX">-->
-      <!--<ion-icon name="ios-card"></ion-icon>-->
-      <div class="row">
-        <div class="col-sm-4 little-margin-right">
-          <img src="assets/imgs/paypal.jpg" alt="XX" *ngIf="cundina.tipo==paypal" class="icon-img">
-          <img src="assets/imgs/card.jpg" alt="XX" *ngIf="cundina.tipo!=paypal" class="icon-img">
+    <ion-item-sliding *ngFor="let cundina of cundinas; let i = index">
+      <ion-item (click)="detalle(cundina)">
+        <div class="row">
+          <div class="col-sm-4 little-margin-right"> 
+            <img src="assets/imgs/card.jpg" alt="XX" class="icon-img">
+          </div>
+          <div class="col-sm-8 vertical-align">
+            <h2>{{cundina.title}}</h2>
+          </div>
         </div>
-        <div class="col-sm-8 vertical-align">
-          <h2>{{cundina.nombre}}</h2>
-        </div>
-      </div>
-    </ion-item>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="primary" (click)="agregarIntegrante(cundina)">
+          <ion-icon class="add-ico" ios="ios-add" md="md-add"></ion-icon>
+          Integrante
+        </button>
+      </ion-item-options> 
+    </ion-item-sliding>
   </ion-list>
 
-  <ion-fab right bottom #fab3>
+  <ion-fab right bottom #fab3 *ngIf="identity.role == 'Admin'">
     <button ion-fab color="default" (click) ="addCundina()"><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
   </ion-fab>
 </ion-content>

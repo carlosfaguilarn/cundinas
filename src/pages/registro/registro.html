@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="text-center">
   <form (ngSubmit)="onSubmit()" class="form-center">
     <ion-item>
       <ion-input type="text" [(ngModel)]="user.name" name="name" placeholder="Nombre"></ion-input>
@@ -23,10 +23,15 @@
     </ion-item>
     <ion-item>
       <ion-input type="text" [(ngModel)]="user.password" name="password" placeholder="Contraseña"></ion-input>
-    </ion-item>  
+    </ion-item> 
+
     <ion-item>
-      <ion-input type="text" [(ngModel)]="user.role" name="role" placeholder="Tipo de usuario"></ion-input>
-    </ion-item>  
+      <ion-label>Tipo de usuario</ion-label>
+      <ion-select name ="role" [(ngModel)]="user.role">
+        <ion-option name ="role" value="Cliente">Soy cliente</ion-option>
+        <ion-option name ="role" value="Admin">Quiero ser administrador</ion-option>
+      </ion-select>
+    </ion-item>
 
     <button ion-button block type="submit">Guardar</button>
   </form> 

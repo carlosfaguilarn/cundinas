@@ -25,7 +25,7 @@ export class LoginPage {
     public alertCtrl: AlertController,
     public userProvider: UserProvider
   ){   
-    this.user = {email : "bombytaj.r@gmail.com", password: "puesesana"};
+    this.user = {email : "carlosf.aguilarn@gmail.com", password: "123456"};
     this.identity = new User('','','','','','','','Cliente','');
   }  
  

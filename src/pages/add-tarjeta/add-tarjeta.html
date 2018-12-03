@@ -10,22 +10,24 @@
           <img src="assets/imgs/card.jpg" alt="XX" class="img-media">
       </ion-row>
       <ion-item>
-        <ion-input type="text" [(ngModel)]="tarjeta.n1" name="n1" placeholder="XXXX"></ion-input>
-        <ion-input type="text" [(ngModel)]="tarjeta.n2" name="n2" placeholder="XXXX"></ion-input>
-        <ion-input type="text" [(ngModel)]="tarjeta.n3" name="n3" placeholder="XXXX"></ion-input>
-        <ion-input type="text" [(ngModel)]="tarjeta.n4" name="n4" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="card_num.n1" name="n1" maxlength="4" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="card_num.n2" name="n2" maxlength="4" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="card_num.n3" name="n3" maxlength="4" placeholder="XXXX"></ion-input>
+        <ion-input type="text" [(ngModel)]="card_num.n4" name="n4" maxlength="4" placeholder="XXXX"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="tarjeta.expiration_year" name="expiration_year" placeholder="AAAA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="tarjeta.expiration_month" name="expiration_month" placeholder="MM"></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-input type="text" [(ngModel)]="tarjeta.fecha" name="fecha" placeholder="MM/AAAA"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-input type="text" [(ngModel)]="tarjeta.cvc" name="cvc" placeholder="CVC"></ion-input>
+        <ion-input type="text" [(ngModel)]="tarjeta.cvv2" name="cvv2" placeholder="CVC"></ion-input>
       </ion-item>
 
       <ion-item> 
-        <ion-input type="text" [(ngModel)]="tarjeta.propietario" name="propietario" placeholder="Nombre del propietario"></ion-input>
+        <ion-input type="text" [(ngModel)]="tarjeta.holder_name" name="holder_name" placeholder="Nombre del propietario"></ion-input>
       </ion-item>
       
       <button ion-button block type="submit">Registrar</button>

@@ -7,25 +7,31 @@
 <ion-content>
   <form (ngSubmit)="onSubmit()" class="form-center">
     <ion-item>
-      <ion-input type="text" [(ngModel)]="cundina.titulo" name="title" placeholder="Nombre"></ion-input>
+      <ion-input type="text" [(ngModel)]="cundina.title" name="title" placeholder="Título"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" [(ngModel)]="integrante" name="integrante" placeholder="Agregar integrante"></ion-input>
-      <button ion-button (click)="agregarIntegrante()" clear item-right color="default"><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
+      <ion-input type="text" [(ngModel)]="cundina.time" name="time" placeholder="Periodos"></ion-input>
+    </ion-item> 
+ 
+    <ion-item>
+      <ion-label>Modalidad</ion-label>
+      <ion-select name ="tipo" [(ngModel)]="cundina.tipo">
+        <ion-option name ="tipo" value="Semana">Semanal</ion-option>
+        <ion-option name ="tipo" value="Quincena">Quincenal</ion-option>
+        <ion-option name ="tipo" value="Mes">Mensual</ion-option>
+      </ion-select>
     </ion-item>
 
     <ion-item> 
-      <ion-input type="text" [(ngModel)]="cundina.periodo" name="periodo" placeholder="Periodo"></ion-input>
-    </ion-item>
- 
-    <ion-item>
-      <ion-datetime displayFormat="MM/DD/YYYY" name="inicio" [(ngModel)]="cundina.inicio" placeholder="Fecha de inicio"></ion-datetime>
+      <ion-input type="text" [(ngModel)]="cundina.cantidad" name="cantidad" placeholder="Cantidad"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-datetime displayFormat="MM/DD/YYYY" name="fin" [(ngModel)]="cundina.fin" placeholder="Fecha finalización"></ion-datetime>
+    <ion-item> 
+      <ion-input type="text" [(ngModel)]="cundina.integrantes" name="integrantes" placeholder="No. integrantes"></ion-input>
     </ion-item>
+ 
+    
 
     <button ion-button block type="submit">Guardar</button>
   </form> 
